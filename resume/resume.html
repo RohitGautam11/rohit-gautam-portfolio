@@ -5,19 +5,19 @@
 <title>Rohit Gautam - Senior Full Stack Developer - Resume</title>
 <meta name="author" content="Rohit Gautam" />
 <style>
-  @page { size: A4; margin: 14mm 15mm; }
+  @page { size: A4; margin: 11mm 13mm; }
   * { box-sizing: border-box; }
-  body { font-family: Arial, Helvetica, sans-serif; font-size: 10.2pt; line-height: 1.38; color: #111827; margin: 0; }
+  body { font-family: Arial, Helvetica, sans-serif; font-size: 9.7pt; line-height: 1.32; color: #111827; margin: 0; }
   a { color: #0f5e8c; text-decoration: none; }
   h1 { font-size: 22pt; margin: 0; letter-spacing: 0.5px; color: #0b2545; }
   .title { font-size: 11.5pt; font-weight: bold; color: #134074; margin: 2px 0 6px; }
   .contact { font-size: 9.4pt; color: #374151; }
   .contact .portfolio { font-weight: bold; }
-  h2 { font-size: 11pt; text-transform: uppercase; letter-spacing: 0.8px; color: #0b2545; border-bottom: 1.4px solid #134074; padding-bottom: 2px; margin: 13px 0 6px; }
+  h2 { font-size: 11pt; text-transform: uppercase; letter-spacing: 0.8px; color: #0b2545; border-bottom: 1.4px solid #134074; padding-bottom: 2px; margin: 10px 0 5px; }
   p { margin: 0 0 4px; }
   ul { margin: 2px 0 6px; padding-left: 16px; }
-  li { margin: 0 0 2.5px; }
-  .job { margin-bottom: 7px; page-break-inside: avoid; }
+  li { margin: 0 0 1.5px; }
+  .job { margin-bottom: 5px; page-break-inside: avoid; }
   .row { display: flex; justify-content: space-between; gap: 10px; }
   .role { font-weight: bold; }
   .date { font-style: italic; color: #374151; white-space: nowrap; }
@@ -52,14 +52,14 @@
   <h2>Technical Skills</h2>
   <table class="skills">
     <tr><td>Backend</td><td>PHP, Laravel (Eloquent, Queues, Jobs, Events, Middleware, Policies), Node.js, NestJS, REST APIs, MVC, OOP, Java (basic)</td></tr>
-    <tr><td>Frontend</td><td>JavaScript, TypeScript, Vue.js, React, HTML5, CSS3, Tailwind CSS, Bootstrap, jQuery, AJAX</td></tr>
-    <tr><td>Databases</td><td>MySQL (schema design, indexing, query optimization, migrations), Firebase Realtime Database</td></tr>
+    <tr><td>Frontend</td><td>JavaScript, TypeScript, Vue.js, React, Next.js, HTML5, CSS3, Tailwind CSS, Bootstrap, jQuery, AJAX</td></tr>
+    <tr><td>Databases</td><td>MySQL, PostgreSQL, Prisma ORM (schema design, indexing, query optimization, migrations), Firebase Realtime Database</td></tr>
     <tr><td>Servers &amp; Networking</td><td>Linux Server, Windows Server, LAMP stack (Apache, MySQL, PHP) setup and tuning, firewall configuration, network security policies, security audits</td></tr>
-    <tr><td>Cloud &amp; DevOps</td><td>AWS, Laravel Vapor, CI/CD, Git, GitHub, GitLab, Bitbucket, production deployments</td></tr>
-    <tr><td>APIs &amp; Integrations</td><td>Twilio (Voice, IVR, SMS, Call Routing), Amazon and eBay APIs, Google Maps and geocoding, Firebase Authentication</td></tr>
+    <tr><td>Cloud &amp; DevOps</td><td>AWS (incl. S3), Vercel, Docker, Laravel Vapor, CI/CD, Git, GitHub, GitLab, Bitbucket, production deployments</td></tr>
+    <tr><td>APIs &amp; Integrations</td><td>Twilio (Voice, IVR, SMS, Call Routing), Amazon and eBay APIs, Google Maps and geocoding, Firebase Authentication, Meta Graph, LinkedIn, X and YouTube APIs, OAuth 2.0, webhooks</td></tr>
     <tr><td>Payments</td><td>Stripe, Laravel Cashier, Razorpay, KakaoPay, P2U Payment</td></tr>
     <tr><td>CMS &amp; E-commerce</td><td>WordPress, Shopify, Drupal, October CMS, Winter CMS</td></tr>
-    <tr><td>Security &amp; Practices</td><td>RBAC, authentication and authorization, code review, SDLC, technical documentation, performance optimization</td></tr>
+    <tr><td>Security &amp; Practices</td><td>RBAC, authentication and authorization, JWT, AES-256 and end-to-end encryption, code review, SDLC, technical documentation, performance optimization</td></tr>
   </table>
 
   <h2>Professional Experience</h2>
@@ -111,6 +111,24 @@
     </ul>
   </div>
   <div class="job">
+    <div class="proj">Post Guru – Social Media Management SaaS (in production) <span class="stack">| NestJS, Next.js, Prisma, PostgreSQL, Stripe</span></div>
+    <ul>
+      <li>One dashboard to manage Facebook, Instagram, X, LinkedIn and YouTube: multi-account publishing, drag-and-drop scheduling calendar with retries, unified DM inbox, comment moderation and analytics.</li>
+      <li>Multi-tenant SaaS with workspaces, team roles, Stripe plans, JWT with rotating refresh tokens, AES-256-GCM encrypted tokens, OAuth 2.0/PKCE and S3 presigned uploads.</li>
+    </ul>
+  </div>
+  <div class="job">
+    <div class="proj">वार्तालाप (Vartalap) – Social &amp; Communication Platform, team project (staging) <span class="stack">| Next.js, React, TypeScript, PostgreSQL</span></div>
+    <ul>
+      <li>End-to-end encrypted 1:1 and group chats, Vichaar public feed for posts and blogs, in-chat payments and bill splitting on a double-entry ledger.</li>
+      <li>Business call centre (shared number, power dialer, SMS/WhatsApp inbox, CRM) and helpdesk with SLA timers and smart triage; web, PWA, Android and iOS (Capacitor).</li>
+    </ul>
+  </div>
+  <div class="job">
+    <div class="proj">Portfolio – Personal &amp; Team Portfolio Platform <span class="stack">| LinkedIn API</span></div>
+    <ul><li>Users create personal and team portfolios, connect their LinkedIn account and publish LinkedIn posts directly from the platform.</li></ul>
+  </div>
+  <div class="job">
     <div class="proj">EducatorConnect – Childcare, Educator &amp; Recruitment Platform <span class="stack">| Laravel, Vue.js, MySQL, Google Maps API</span></div>
     <ul>
       <li>Role-based platform with separate dashboards for parents, childcare centres and educators; job posting and applicant tracking.</li>
@@ -131,7 +149,7 @@
   </div>
   <div class="job">
     <div class="proj">Other SaaS Platforms</div>
-    <ul><li>DialOnCloud (cloud browser calling), BlabBlab Messenger (real-time messaging and calling), Business Hub (multi-service digital marketplace).</li></ul>
+    <ul><li>DialOnCloud (cloud browser calling), BlabBlab Messenger (real-time messaging and calling), Business Hub (multi-service digital marketplace).</li><li>Plus several in-house products and client projects (Zasya Solutions and others) that I can't name under company confidentiality policies.</li></ul>
   </div>
 
   <h2>Education</h2>

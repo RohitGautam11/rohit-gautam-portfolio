@@ -148,7 +148,7 @@
         <dl class="stats">
           <div class="stat"><dt>Years building web apps</dt><dd><span data-count="4">4</span>+</dd></div>
           <div class="stat"><dt>Years in IT overall</dt><dd><span data-count="7">7</span>+</dd></div>
-          <div class="stat"><dt>Production platforms delivered</dt><dd><span data-count="10">10</span>+</dd></div>
+          <div class="stat"><dt>Projects delivered</dt><dd><span data-count="15">15</span>+</dd></div>
           <div class="stat"><dt>Countries served</dt><dd><span data-count="3">3</span></dd></div>
         </dl>
       </div>
@@ -375,6 +375,143 @@
           </div>
         </article>
 
+        <!-- Products -->
+        <article class="product reveal">
+          <div class="product__head">
+            <div>
+              <p class="kicker">SaaS product &middot; Social media management</p>
+              <h3>Post Guru</h3>
+              <p class="product__sub">Manage every social account from one dashboard</p>
+            </div>
+            <span class="status status--live"><span class="status__dot"></span>In production</span>
+          </div>
+          <p class="product__lead">
+            Users connect their Facebook Pages, Instagram Business, X (Twitter), LinkedIn and YouTube accounts once, then
+            create, schedule, publish, reply and measure everything from a single platform. It's built as a multi-tenant SaaS
+            with teams and paid plans.
+          </p>
+          <div class="product__grid">
+            <div class="fgroup">
+              <h4>Publishing &amp; scheduling</h4>
+              <ul class="checks">
+                <li>Publish one post to many accounts at once, with per-platform text, YouTube titles, images, carousels and video</li>
+                <li>Drag-and-drop content calendar with automatic publishing</li>
+                <li>Automatic retries with exponential backoff, plus failure alerts</li>
+                <li>Atomic job claiming so a scheduled post is never published twice, even with overlapping cron runs</li>
+              </ul>
+            </div>
+            <div class="fgroup">
+              <h4>Engagement &amp; analytics</h4>
+              <ul class="checks">
+                <li>Unified inbox for direct messages: Messenger, Instagram Direct and X DMs</li>
+                <li>Comment moderation: reply, hide and delete, triaged by sentiment</li>
+                <li>Real-time comments and messages through Meta webhooks</li>
+                <li>Analytics: audience growth, engagement, top posts and a best-time-to-post heatmap</li>
+              </ul>
+            </div>
+            <div class="fgroup">
+              <h4>SaaS &amp; teams</h4>
+              <ul class="checks">
+                <li>Workspaces with team roles (Owner, Admin, Editor, Viewer) and email invitations</li>
+                <li>Stripe subscriptions with Free, Pro and Business plans and server-side plan limits</li>
+                <li>Direct browser-to-S3/Cloudflare R2 media uploads with presigned URLs</li>
+              </ul>
+            </div>
+            <div class="fgroup">
+              <h4>Security</h4>
+              <ul class="checks">
+                <li>JWT access cookies with rotating refresh tokens and session-family revocation</li>
+                <li>Social tokens encrypted at rest (AES-256-GCM) and refreshed automatically</li>
+                <li>OAuth 2.0 with PKCE, signature-verified webhooks, rate limiting and strict input validation</li>
+              </ul>
+            </div>
+          </div>
+          <ul class="tags"><li>NestJS</li><li>Next.js</li><li>TypeScript</li><li>Prisma</li><li>PostgreSQL</li><li>Tailwind CSS</li><li>Stripe</li><li>AWS S3 / R2</li><li>Meta Graph API</li><li>LinkedIn API</li><li>X API</li><li>YouTube API</li><li>Vercel</li><li>Docker</li></ul>
+        </article>
+
+        <article class="product reveal">
+          <div class="product__head">
+            <div>
+              <p class="kicker">Team product &middot; Social &amp; communication</p>
+              <h3>वार्तालाप <span class="product__alt">(Vartalap)</span></h3>
+              <p class="product__sub">Chats, community feed, payments, call centre and helpdesk in one app</p>
+            </div>
+            <span class="status status--staging"><span class="status__dot"></span>On staging</span>
+          </div>
+          <p class="product__lead">
+            A platform my team and I built where people connect with each other, chat privately or in groups, write public
+            posts and blogs, and even pay or split bills inside a conversation. End-to-end encryption is on by default, and
+            it runs on the web, as an installable app, and on Android and iPhone.
+          </p>
+          <div class="product__grid">
+            <div class="fgroup">
+              <h4>Connect &amp; chat</h4>
+              <ul class="checks">
+                <li>1:1 and group chats (up to 256 members) with replies, reactions, edits, pins and read receipts</li>
+                <li>Delete-for-everyone, polls, photos, files and voice notes</li>
+                <li><strong>Vichaar</strong>: a public feed where users write posts and blogs with moods and discover each other</li>
+                <li>Time capsules (messages that unlock on a future date) and disappearing messages</li>
+              </ul>
+            </div>
+            <div class="fgroup">
+              <h4>Privacy &amp; security</h4>
+              <ul class="checks">
+                <li>End-to-end encryption in the browser: ECDH P-256 key exchange and AES-256-GCM messages and files</li>
+                <li>Keys rotate when group members change; safety numbers and key-change warnings</li>
+                <li>Privacy Shield blurs the app when you switch away</li>
+                <li>Audit log and a signed-in device list with remote sign-out</li>
+              </ul>
+            </div>
+            <div class="fgroup">
+              <h4>Wallet &amp; payments</h4>
+              <ul class="checks">
+                <li>Pay and split bills inside chats, plus payment requests</li>
+                <li>Double-entry ledger with atomic, idempotent transfers</li>
+                <li>Encrypted payment notes</li>
+              </ul>
+            </div>
+            <div class="fgroup">
+              <h4>Business: call centre &amp; helpdesk</h4>
+              <ul class="checks">
+                <li>One business number for the team (ring-all / round-robin), click-to-call with number masking and a power dialer</li>
+                <li>SMS and WhatsApp inbox, CRM pipeline and follow-ups</li>
+                <li>Helpdesk tickets with SLA timers, smart triage (English, Hindi, Hinglish), auto-assignment and CSAT</li>
+                <li>Every missed call opens a callback ticket; public help centre with knowledge-base search</li>
+              </ul>
+            </div>
+          </div>
+          <ul class="tags"><li>Next.js</li><li>React</li><li>TypeScript</li><li>PostgreSQL</li><li>WebCrypto (E2EE)</li><li>Zod</li><li>PWA</li><li>Capacitor (Android / iOS)</li><li>Vercel</li></ul>
+        </article>
+
+        <article class="product product--compact reveal">
+          <div class="product__head">
+            <div>
+              <p class="kicker">SaaS product &middot; Personal branding</p>
+              <h3>Portfolio</h3>
+              <p class="product__sub">Personal and team portfolios, connected to LinkedIn</p>
+            </div>
+          </div>
+          <p class="product__lead">
+            A platform where professionals build their own portfolio and teams build a shared one, then grow their reach on
+            LinkedIn without leaving the app.
+          </p>
+          <div class="product__grid">
+            <div class="fgroup">
+              <ul class="checks">
+                <li>Create a personal portfolio and share it with a single link</li>
+                <li>Create a team portfolio that showcases the whole team</li>
+              </ul>
+            </div>
+            <div class="fgroup">
+              <ul class="checks">
+                <li>Connect a LinkedIn account to the platform</li>
+                <li>Write and publish LinkedIn posts directly from the platform</li>
+              </ul>
+            </div>
+          </div>
+          <ul class="tags"><li>LinkedIn API</li><li>OAuth 2.0</li><li>Team workspaces</li></ul>
+        </article>
+
         <div class="cards">
           <article class="card reveal">
             <div class="card__top">
@@ -447,6 +584,18 @@
               <li><strong>Business Hub</strong><span>Multi-service digital marketplace</span></li>
               <li><strong>Resource management apps</strong><span>International client work via MustFinTech</span></li>
             </ul>
+          </div>
+        </div>
+
+        <div class="nda reveal">
+          <span class="nda__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></span>
+          <div>
+            <h3>Plus confidential work</h3>
+            <p>
+              I've also built several in-house products at Zasya Solutions and other companies, and client projects, whose names
+              I can't share because of company confidentiality policies and NDAs. I'm happy to walk through the architecture and
+              the problems I solved on them in an interview, without naming the clients.
+            </p>
           </div>
         </div>
       </div>
@@ -628,15 +777,15 @@
           </div>
           <div class="skill reveal">
             <div class="skill__head"><span class="skill__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 21h8M12 18v3M7 9l2 2-2 2M12 13h4"/></svg></span><h3>Frontend</h3><span class="skill__count"></span></div>
-            <ul class="chips"><li>Vue.js</li><li>React</li><li>JavaScript</li><li>TypeScript</li><li>HTML5</li><li>CSS3</li><li>Tailwind CSS</li><li>Bootstrap</li><li>jQuery</li><li>AJAX</li><li>Responsive design</li></ul>
+            <ul class="chips"><li>Vue.js</li><li>React</li><li>Next.js</li><li>JavaScript</li><li>TypeScript</li><li>HTML5</li><li>CSS3</li><li>Tailwind CSS</li><li>Bootstrap</li><li>jQuery</li><li>AJAX</li><li>Responsive design</li><li>PWA</li><li>Capacitor (Android / iOS)</li></ul>
           </div>
           <div class="skill reveal">
             <div class="skill__head"><span class="skill__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3v18h18"/><path d="m7 15 4-4 3 3 5-6"/></svg></span><h3>Databases</h3><span class="skill__count"></span></div>
-            <ul class="chips"><li>MySQL</li><li>SQL</li><li>Database design</li><li>Indexing</li><li>Query optimization</li><li>Migrations</li><li>Firebase Realtime DB</li></ul>
+            <ul class="chips"><li>MySQL</li><li>PostgreSQL</li><li>Prisma ORM</li><li>SQL</li><li>Database design</li><li>Indexing</li><li>Query optimization</li><li>Migrations</li><li>Firebase Realtime DB</li></ul>
           </div>
           <div class="skill reveal">
             <div class="skill__head"><span class="skill__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 19a4.5 4.5 0 1 0-1.4-8.78A6 6 0 0 0 4.5 12 3.5 3.5 0 0 0 6 19z"/></svg></span><h3>Cloud &amp; DevOps</h3><span class="skill__count"></span></div>
-            <ul class="chips"><li>AWS</li><li>Laravel Vapor</li><li>CI/CD pipelines</li><li>Git</li><li>GitHub</li><li>GitLab</li><li>Bitbucket</li><li>Production deployments</li></ul>
+            <ul class="chips"><li>AWS</li><li>AWS S3 / Cloudflare R2</li><li>Vercel</li><li>Docker</li><li>Laravel Vapor</li><li>CI/CD pipelines</li><li>Git</li><li>GitHub</li><li>GitLab</li><li>Bitbucket</li><li>Production deployments</li></ul>
           </div>
           <div class="skill reveal">
             <div class="skill__head"><span class="skill__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="7" rx="1.5"/><rect x="3" y="14" width="18" height="7" rx="1.5"/><path d="M7 6.5h.01M7 17.5h.01"/></svg></span><h3>Servers &amp; Networking</h3><span class="skill__count"></span></div>
@@ -644,7 +793,7 @@
           </div>
           <div class="skill reveal">
             <div class="skill__head"><span class="skill__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.5 1.5"/><path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.5-1.5"/></svg></span><h3>APIs &amp; Integrations</h3><span class="skill__count"></span></div>
-            <ul class="chips"><li>Twilio Voice</li><li>IVR</li><li>SMS</li><li>Call routing</li><li>Amazon API</li><li>eBay API</li><li>Google Maps API</li><li>Geocoding</li><li>Firebase Authentication</li></ul>
+            <ul class="chips"><li>Twilio Voice</li><li>IVR</li><li>SMS</li><li>Call routing</li><li>Amazon API</li><li>eBay API</li><li>Google Maps API</li><li>Geocoding</li><li>Firebase Authentication</li><li>Meta Graph API</li><li>LinkedIn API</li><li>X (Twitter) API</li><li>YouTube API</li><li>OAuth 2.0 / PKCE</li><li>Webhooks</li></ul>
           </div>
           <div class="skill reveal">
             <div class="skill__head"><span class="skill__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20M6 15h4"/></svg></span><h3>Payments</h3><span class="skill__count"></span></div>
@@ -656,7 +805,7 @@
           </div>
           <div class="skill reveal">
             <div class="skill__head"><span class="skill__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 4 5v6c0 5 3.4 9.4 8 11 4.6-1.6 8-6 8-11V5z"/><path d="m9 12 2 2 4-4"/></svg></span><h3>Security &amp; Practices</h3><span class="skill__count"></span></div>
-            <ul class="chips"><li>RBAC</li><li>Authentication &amp; authorization</li><li>Code review</li><li>SDLC</li><li>Technical documentation</li><li>Performance optimization</li></ul>
+            <ul class="chips"><li>RBAC</li><li>Authentication &amp; authorization</li><li>JWT &amp; refresh tokens</li><li>AES-256 encryption</li><li>End-to-end encryption</li><li>Code review</li><li>SDLC</li><li>Technical documentation</li><li>Performance optimization</li></ul>
           </div>
         </div>
 

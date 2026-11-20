@@ -581,3 +581,40 @@ textarea.api__code:disabled { color: #64748b; }
 @media (max-width: 900px) { .games { grid-template-columns: 1fr; } }
 @media (prefers-reduced-motion: reduce) { .mem__inner { transition: none; } .tb__card { animation: none; } }
 .mem__grid { max-width: 400px; margin: 0 auto; }
+
+/* ===== Products ===== */
+.product {
+  background: var(--surface); border: 1px solid var(--border); border-radius: 20px;
+  padding: 32px; margin-bottom: 24px; box-shadow: var(--shadow);
+}
+.product__head { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; flex-wrap: wrap; }
+.product h3 { font-size: 1.8rem; }
+.product__alt { font-size: 1.1rem; color: var(--muted); font-weight: 500; }
+.product__sub { color: var(--accent-2); font-weight: 600; margin: 6px 0 0; }
+.product__lead { color: var(--muted); margin: 16px 0 20px; max-width: 860px; }
+.product__grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px 32px; margin-bottom: 20px; }
+.product__grid > * { min-width: 0; }
+.fgroup h4 { font: 600 13px var(--mono); text-transform: uppercase; letter-spacing: .06em; color: var(--text); margin: 0 0 4px; }
+.fgroup .checks { margin: 8px 0 14px; }
+.fgroup .checks li { font-size: 14.5px; }
+.status { display: inline-flex; align-items: center; gap: 8px; font: 600 12.5px var(--mono); padding: 6px 12px; border-radius: 999px; white-space: nowrap; }
+.status__dot { width: 8px; height: 8px; border-radius: 50%; background: currentColor; }
+.status--live { background: rgba(34, 197, 94, .14); color: #16a34a; }
+.status--live .status__dot { animation: pulse 2s infinite; box-shadow: 0 0 0 0 currentColor; }
+.status--staging { background: rgba(245, 158, 11, .16); color: #b45309; }
+:root[data-theme="dark"] .status--live { color: #4ade80; }
+:root[data-theme="dark"] .status--staging { color: #fbbf24; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .status--live { color: #4ade80; }
+  :root:not([data-theme="light"]) .status--staging { color: #fbbf24; }
+}
+@media (max-width: 760px) { .product { padding: 22px 18px; } .product__grid { grid-template-columns: 1fr; } .product h3 { font-size: 1.5rem; } }
+
+.nda {
+  display: flex; gap: 16px; align-items: flex-start; margin-top: 24px; padding: 22px 24px;
+  border: 1px dashed color-mix(in srgb, var(--accent) 45%, var(--border)); border-radius: var(--radius);
+  background: var(--accent-soft);
+}
+.nda__icon { display: inline-grid; place-items: center; width: 40px; height: 40px; border-radius: 10px; background: var(--surface); color: var(--accent); flex-shrink: 0; }
+.nda h3 { font-size: 1.05rem; margin-bottom: 6px; }
+.nda p { margin: 0; color: var(--muted); font-size: 15px; }
