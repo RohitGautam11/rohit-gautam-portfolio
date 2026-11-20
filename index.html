@@ -383,7 +383,7 @@
               <h3>Post Guru</h3>
               <p class="product__sub">Manage every social account from one dashboard</p>
             </div>
-            <span class="status status--live"><span class="status__dot"></span>In production</span>
+            <span class="status status--staging"><span class="status__dot"></span>On staging</span>
           </div>
           <p class="product__lead">
             Users connect their Facebook Pages, Instagram Business, X (Twitter), LinkedIn and YouTube accounts once, then
@@ -608,35 +608,236 @@
           <p class="eyebrow">05 &middot; Playground</p>
           <h2>Don't just read about it. Try it.</h2>
           <p class="section__sub">
-            Small working apps I built for this site: a task board, a live backend API, a networking tool and two games.
-            Click around. Everything here runs for real.
+            Five games, a live backend API with a server monitor, a networking lab and a task board, all built by me
+            for this site. Everything is randomized, so no two visits look the same.
           </p>
         </header>
 
         <div class="pg reveal">
           <div class="pg__tabs" role="tablist" aria-label="Live demos">
-            <button role="tab" id="tab-tasks" aria-controls="panel-tasks" aria-selected="true" class="pg__tab">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
-              Task Board <span class="pg__kind">Frontend</span>
+            <button role="tab" id="tab-games" aria-controls="panel-games" aria-selected="true" class="pg__tab">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="6" width="20" height="12" rx="4"/><path d="M6 12h4M8 10v4M15 11h.01M18 13h.01"/></svg>
+              Arcade <span class="pg__kind">5 games</span>
             </button>
             <button role="tab" id="tab-api" aria-controls="panel-api" aria-selected="false" tabindex="-1" class="pg__tab">
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 9-4 3 4 3M16 9l4 3-4 3M14 5l-4 14"/></svg>
-              Inventory API <span class="pg__kind">Backend</span>
+              Live API <span class="pg__kind">Backend</span>
             </button>
             <button role="tab" id="tab-net" aria-controls="panel-net" aria-selected="false" tabindex="-1" class="pg__tab">
               <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="2" width="6" height="6" rx="1"/><rect x="2" y="16" width="6" height="6" rx="1"/><rect x="16" y="16" width="6" height="6" rx="1"/><path d="M12 8v4M5 16v-2h14v2"/></svg>
-              Subnet Calculator <span class="pg__kind">Networking</span>
+              Network Lab <span class="pg__kind">Networking</span>
             </button>
-            <button role="tab" id="tab-games" aria-controls="panel-games" aria-selected="false" tabindex="-1" class="pg__tab">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="6" width="20" height="12" rx="4"/><path d="M6 12h4M8 10v4M15 11h.01M18 13h.01"/></svg>
-              Games <span class="pg__kind">Logic</span>
+            <button role="tab" id="tab-tasks" aria-controls="panel-tasks" aria-selected="false" tabindex="-1" class="pg__tab">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+              Task Board <span class="pg__kind">Frontend</span>
             </button>
           </div>
 
-          <!-- Task board -->
-          <div class="pg__panel" role="tabpanel" id="panel-tasks" aria-labelledby="tab-tasks">
+          <!-- ARCADE -->
+          <div class="pg__panel" role="tabpanel" id="panel-games" aria-labelledby="tab-games">
+            <div class="arcade__menu" role="group" aria-label="Choose a game">
+              <button type="button" class="arcade__pick" data-game="whack"><span class="arcade__emoji" aria-hidden="true">🐞</span><b>Whack-a-Bug</b><small>Reflexes</small></button>
+              <button type="button" class="arcade__pick" data-game="typing"><span class="arcade__emoji" aria-hidden="true">⌨️</span><b>Code Typing</b><small>Speed</small></button>
+              <button type="button" class="arcade__pick" data-game="quiz"><span class="arcade__emoji" aria-hidden="true">🧠</span><b>Dev Quiz</b><small>Knowledge</small></button>
+              <button type="button" class="arcade__pick" data-game="memory"><span class="arcade__emoji" aria-hidden="true">🃏</span><b>Stack Memory</b><small>Memory</small></button>
+              <button type="button" class="arcade__pick" data-game="ttt"><span class="arcade__emoji" aria-hidden="true">⭕</span><b>Tic-Tac-Toe AI</b><small>Strategy</small></button>
+            </div>
+
+            <!-- Whack-a-Bug -->
+            <div class="game" data-stage="whack" hidden>
+              <div class="game__head">
+                <div><h3>Whack-a-Bug</h3><p class="game__sub">Bugs are popping up on the production servers. Squash them fast, build combos, but <b>don't click the ⭐ features</b>. It speeds up as you go.</p></div>
+                <button class="btn btn--primary btn--sm" id="wb-start" type="button">Start (30s)</button>
+              </div>
+              <div class="hud"><span>Score <b id="wb-score">0</b></span><span>Time <b id="wb-time">30</b>s</span><span>Combo <b id="wb-combo">x1</b></span><span>Best <b id="wb-best">0</b></span></div>
+              <div class="wb__grid" id="wb-grid"></div>
+              <p class="game__msg" id="wb-msg" role="status">Press Start. You have 30 seconds.</p>
+            </div>
+
+            <!-- Code Typing -->
+            <div class="game" data-stage="typing" hidden>
+              <div class="game__head">
+                <div><h3>Code Typing Test</h3><p class="game__sub">Type the line exactly as shown: real Laravel, SQL, JavaScript and Linux one-liners. The timer starts on your first key.</p></div>
+                <button class="btn btn--ghost btn--sm" id="ty-next" type="button">New snippet</button>
+              </div>
+              <div class="hud"><span>WPM <b id="ty-wpm">0</b></span><span>Accuracy <b id="ty-acc">100%</b></span><span>Language <b id="ty-lang">-</b></span><span>Best <b id="ty-best">0 WPM</b></span></div>
+              <div class="ty__target" id="ty-target" aria-hidden="true"></div>
+              <label class="sr" for="ty-input">Type the code snippet</label>
+              <input id="ty-input" class="inp inp--mono ty__input" type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Start typing here..." />
+              <p class="game__msg" id="ty-msg" role="status"></p>
+            </div>
+
+            <!-- Dev Quiz -->
+            <div class="game" data-stage="quiz" hidden>
+              <div class="game__head">
+                <div><h3>Dev Quiz</h3><p class="game__sub">10 random questions on HTTP, networking, SQL, Laravel, JavaScript, Linux and security. 15 seconds each, and faster answers score more.</p></div>
+                <button class="btn btn--primary btn--sm" id="qz-start" type="button">Start quiz</button>
+              </div>
+              <div class="hud"><span>Question <b id="qz-num">0/10</b></span><span>Score <b id="qz-score">0</b></span><span>Streak <b id="qz-streak">0</b></span><span>Best <b id="qz-best">0</b></span></div>
+              <div class="qz__timer"><span id="qz-bar"></span></div>
+              <div class="qz__body" id="qz-body">
+                <p class="qz__cat" id="qz-cat"></p>
+                <p class="qz__q" id="qz-q">Ready? A new random set every round.</p>
+                <div class="qz__opts" id="qz-opts"></div>
+                <p class="qz__exp" id="qz-exp" role="status"></p>
+              </div>
+            </div>
+
+            <!-- Memory -->
+            <div class="game" data-stage="memory" hidden>
+              <div class="game__head">
+                <div><h3>Stack Memory</h3><p class="game__sub">Match the pairs. Every round deals a different random set from my tech stack.</p></div>
+                <div class="game__ctl">
+                  <div class="seg" role="group" aria-label="Difficulty" id="mem-diff">
+                    <button type="button" data-n="6">Easy</button>
+                    <button type="button" data-n="8" class="is-on">Normal</button>
+                    <button type="button" data-n="10">Hard</button>
+                  </div>
+                  <button class="btn btn--ghost btn--sm" id="mem-restart" type="button">New deal</button>
+                </div>
+              </div>
+              <div class="hud"><span>Moves <b id="mem-moves">0</b></span><span>Time <b id="mem-time">0s</b></span><span>Pairs <b id="mem-pairs">0/8</b></span><span>Best <b id="mem-best">-</b></span></div>
+              <div class="mem__grid" id="mem-grid"></div>
+              <p class="game__msg" id="mem-msg" role="status"></p>
+            </div>
+
+            <!-- Tic-tac-toe -->
+            <div class="game" data-stage="ttt" hidden>
+              <div class="game__head">
+                <div><h3>Tic-Tac-Toe vs. AI</h3><p class="game__sub">You are X. Pick a level: the Impossible AI uses the minimax algorithm and never loses. Who starts alternates every game.</p></div>
+                <div class="game__ctl">
+                  <div class="seg" role="group" aria-label="AI level" id="ttt-level">
+                    <button type="button" data-l="easy">Easy</button>
+                    <button type="button" data-l="medium" class="is-on">Medium</button>
+                    <button type="button" data-l="impossible">Impossible</button>
+                  </div>
+                  <button class="btn btn--ghost btn--sm" id="ttt-restart" type="button">New game</button>
+                </div>
+              </div>
+              <div class="hud"><span>You <b id="ttt-w">0</b></span><span>Draws <b id="ttt-d">0</b></span><span>AI <b id="ttt-l">0</b></span></div>
+              <div class="ttt" id="ttt"></div>
+              <p class="game__msg" id="ttt-msg" role="status">Your move.</p>
+            </div>
+          </div>
+
+          <!-- LIVE API -->
+          <div class="pg__panel" role="tabpanel" id="panel-api" aria-labelledby="tab-api" hidden>
             <div class="pg__intro">
-              <p>A Kanban-style task manager. Add tasks, drag them between columns (or use the arrows), filter by priority and search. Your board is saved in your browser.</p>
+              <p>
+                A real REST API running as Node.js serverless functions on Vercel. <strong>Receive stock</strong> uses the same logic
+                I built for Everlast: incoming stock fills pending pre-orders oldest first, and the surplus is split across warehouses.
+                Every request is randomized. Edit the JSON, break it on purpose to see the Laravel-style <code>422</code>, or start
+                the server monitor.
+              </p>
+              <ul class="pg__shows"><li>REST design</li><li>Validation &amp; status codes</li><li>Business logic</li><li>Serverless</li><li>Monitoring</li></ul>
+            </div>
+            <div class="api">
+              <div class="api__req">
+                <div class="api__line">
+                  <label class="sr" for="api-preset">Request</label>
+                  <select id="api-preset" class="inp inp--sel">
+                    <option value="receive">POST /api/inventory/receive</option>
+                    <option value="invalid">POST /api/inventory/receive (broken body)</option>
+                    <option value="health">GET /api/health</option>
+                  </select>
+                </div>
+                <div class="api__line">
+                  <button class="btn btn--ghost btn--sm" id="api-random" type="button">🎲 Randomize</button>
+                  <button class="btn btn--primary btn--sm" id="api-send" type="button">Send request
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                  </button>
+                </div>
+                <label class="api__label" for="api-body">Request body (JSON)</label>
+                <textarea id="api-body" class="api__code" spellcheck="false" rows="15"></textarea>
+                <p class="api__curl"><span>cURL</span><code id="api-curl"></code></p>
+              </div>
+              <div class="api__res">
+                <div class="api__meta">
+                  <span class="api__label">Response</span>
+                  <span class="api__status" id="api-status">Waiting</span>
+                  <span class="api__time" id="api-time"></span>
+                </div>
+                <div class="api__viz" id="api-viz" hidden></div>
+                <pre class="api__code api__out" id="api-out">// Press "Send request" to call the live API</pre>
+                <div class="api__hist">
+                  <span class="api__label">Request history</span>
+                  <ol id="api-hist"><li class="api__empty">No requests yet</li></ol>
+                </div>
+              </div>
+            </div>
+
+            <div class="mon">
+              <div class="mon__head">
+                <div>
+                  <h3>Live server monitor</h3>
+                  <p>Pings <code>GET /api/health</code> every second for 30 seconds and charts the round-trip time from your browser to the server.</p>
+                </div>
+                <button class="btn btn--primary btn--sm" id="mon-btn" type="button">Start monitoring</button>
+              </div>
+              <div class="mon__stats" id="mon-stats">
+                <div><span>Status</span><b id="mon-state">Idle</b></div>
+                <div><span>Last</span><b id="mon-last">-</b></div>
+                <div><span>Avg</span><b id="mon-avg">-</b></div>
+                <div><span>Min / Max</span><b id="mon-mm">-</b></div>
+                <div><span>Region</span><b id="mon-region">-</b></div>
+                <div><span>Uptime (session)</span><b id="mon-up">-</b></div>
+              </div>
+              <svg class="mon__chart" id="mon-chart" viewBox="0 0 600 120" preserveAspectRatio="none" role="img" aria-label="Response time chart">
+                <line x1="0" y1="119" x2="600" y2="119" class="mon__axis"/>
+                <polyline id="mon-area" class="mon__area" points=""/>
+                <polyline id="mon-line" class="mon__line" points=""/>
+              </svg>
+            </div>
+          </div>
+
+          <!-- NETWORK LAB -->
+          <div class="pg__panel" role="tabpanel" id="panel-net" aria-labelledby="tab-net" hidden>
+            <div class="pg__intro">
+              <p>Tools I used every week as a server administrator. Calculate any IPv4 subnet, split it into smaller subnets, then test yourself with the subnetting challenge.</p>
+              <ul class="pg__shows"><li>Networking</li><li>Bitwise logic</li><li>Input validation</li></ul>
+            </div>
+            <form class="net__form" id="net-form" autocomplete="off">
+              <label class="sr" for="net-in">IP address with CIDR prefix</label>
+              <input id="net-in" class="inp inp--mono" spellcheck="false" />
+              <button class="btn btn--primary" type="submit">Calculate</button>
+              <button class="btn btn--ghost" type="button" id="net-random">🎲 Random</button>
+            </form>
+            <p class="net__err" id="net-err" role="alert"></p>
+            <dl class="net__grid" id="net-out"></dl>
+            <div class="net__bits" id="net-bits" aria-label="Binary view of address with network bits highlighted"></div>
+
+            <div class="net__two">
+              <div class="net__box">
+                <div class="net__boxhead">
+                  <h3>Subnet splitter</h3>
+                  <label class="sr" for="net-split">Number of subnets</label>
+                  <select id="net-split" class="inp inp--sel inp--sm">
+                    <option value="2">Split into 2</option>
+                    <option value="4" selected>Split into 4</option>
+                    <option value="8">Split into 8</option>
+                    <option value="16">Split into 16</option>
+                  </select>
+                </div>
+                <div class="split__bar" id="split-bar"></div>
+                <div class="split__list" id="split-list"></div>
+              </div>
+              <div class="net__box">
+                <div class="net__boxhead">
+                  <h3>Subnetting challenge</h3>
+                  <span class="net__score">Score <b id="nq-score">0</b> &middot; Streak <b id="nq-streak">0</b></span>
+                </div>
+                <p class="nq__q" id="nq-q"></p>
+                <div class="qz__opts" id="nq-opts"></div>
+                <p class="qz__exp" id="nq-exp" role="status"></p>
+                <button class="link-btn" type="button" id="nq-next">Next question</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- TASK BOARD -->
+          <div class="pg__panel" role="tabpanel" id="panel-tasks" aria-labelledby="tab-tasks" hidden>
+            <div class="pg__intro">
+              <p>A Kanban-style task manager. Add tasks or grab a random one, drag them between columns (or use the arrows), filter and search. Finish a task for a small celebration. Your board is saved in your browser.</p>
               <ul class="pg__shows"><li>State management</li><li>Drag &amp; drop</li><li>Filtering &amp; search</li><li>Local persistence</li></ul>
             </div>
             <form class="tb__form" id="tb-form" autocomplete="off">
@@ -649,6 +850,7 @@
                 <option value="low">Low</option>
               </select>
               <button class="btn btn--primary" type="submit">Add task</button>
+              <button class="btn btn--ghost" type="button" id="tb-random">🎲 Random task</button>
             </form>
             <div class="tb__tools">
               <label class="sr" for="tb-search">Search tasks</label>
@@ -659,104 +861,15 @@
                 <button type="button" data-filter="medium">Medium</button>
                 <button type="button" data-filter="low">Low</button>
               </div>
-              <span class="tb__progress" id="tb-progress"></span>
               <button type="button" class="link-btn" id="tb-clear">Clear done</button>
-              <button type="button" class="link-btn" id="tb-reset">Reset demo</button>
+              <button type="button" class="link-btn" id="tb-reset">New random board</button>
             </div>
+            <div class="tb__progress"><div class="tb__bar"><span id="tb-bar"></span></div><span id="tb-progress"></span></div>
             <div class="tb__board" id="tb-board">
               <div class="tb__col" data-col="todo"><h4>To do <span class="cnt"></span></h4><ul class="tb__list"></ul></div>
               <div class="tb__col" data-col="doing"><h4>In progress <span class="cnt"></span></h4><ul class="tb__list"></ul></div>
               <div class="tb__col" data-col="done"><h4>Done <span class="cnt"></span></h4><ul class="tb__list"></ul></div>
             </div>
-          </div>
-
-          <!-- Inventory API -->
-          <div class="pg__panel" role="tabpanel" id="panel-api" aria-labelledby="tab-api" hidden>
-            <div class="pg__intro">
-              <p>
-                A real REST API running as a Node.js serverless function on Vercel. It uses the same inbound-stock logic I built for
-                <strong>Everlast</strong>: incoming stock fills pending pre-orders first (oldest first), then the surplus is split
-                across warehouse locations and released as available stock. Edit the JSON and send it. Bad input gets a
-                Laravel-style <code>422</code> validation response.
-              </p>
-              <ul class="pg__shows"><li>REST design</li><li>Validation &amp; status codes</li><li>Business logic</li><li>Serverless deploy</li></ul>
-            </div>
-            <div class="api">
-              <div class="api__req">
-                <div class="api__line">
-                  <label class="sr" for="api-preset">Request</label>
-                  <select id="api-preset" class="inp inp--sel">
-                    <option value="receive">POST /api/inventory/receive</option>
-                    <option value="invalid">POST /api/inventory/receive (invalid body)</option>
-                    <option value="health">GET /api/health</option>
-                  </select>
-                  <button class="btn btn--primary" id="api-send" type="button">Send
-                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-                  </button>
-                </div>
-                <label class="api__label" for="api-body">Request body (JSON)</label>
-                <textarea id="api-body" class="api__code" spellcheck="false" rows="16"></textarea>
-              </div>
-              <div class="api__res">
-                <div class="api__meta">
-                  <span class="api__label">Response</span>
-                  <span class="api__status" id="api-status">Waiting</span>
-                  <span class="api__time" id="api-time"></span>
-                </div>
-                <pre class="api__code api__out" id="api-out">// Press "Send" to call the live API</pre>
-                <p class="api__curl"><span>cURL</span><code id="api-curl"></code></p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Subnet calculator -->
-          <div class="pg__panel" role="tabpanel" id="panel-net" aria-labelledby="tab-net" hidden>
-            <div class="pg__intro">
-              <p>An IPv4 subnet calculator, the kind of thing I used every week as a server administrator. Enter an address in CIDR notation to see the network, broadcast, usable host range and masks.</p>
-              <ul class="pg__shows"><li>Networking</li><li>Bitwise logic</li><li>Input validation</li></ul>
-            </div>
-            <form class="net__form" id="net-form" autocomplete="off">
-              <label class="sr" for="net-in">IP address with CIDR prefix</label>
-              <input id="net-in" class="inp inp--mono" value="192.168.10.34/26" spellcheck="false" />
-              <button class="btn btn--primary" type="submit">Calculate</button>
-            </form>
-            <div class="net__presets">
-              <span>Try:</span>
-              <button type="button" class="chip-btn" data-net="10.0.0.0/8">10.0.0.0/8</button>
-              <button type="button" class="chip-btn" data-net="172.16.5.200/20">172.16.5.200/20</button>
-              <button type="button" class="chip-btn" data-net="192.168.1.77/24">192.168.1.77/24</button>
-              <button type="button" class="chip-btn" data-net="203.0.113.9/30">203.0.113.9/30</button>
-            </div>
-            <p class="net__err" id="net-err" role="alert"></p>
-            <dl class="net__grid" id="net-out"></dl>
-            <div class="net__bits" id="net-bits" aria-label="Binary view of address with network bits highlighted"></div>
-          </div>
-
-          <!-- Games -->
-          <div class="pg__panel" role="tabpanel" id="panel-games" aria-labelledby="tab-games" hidden>
-            <div class="games">
-              <div class="game">
-                <div class="game__head">
-                  <h3>Stack Memory</h3>
-                  <button class="link-btn" id="mem-restart" type="button">Restart</button>
-                </div>
-                <p class="game__sub">Match the pairs from my tech stack in as few moves as you can.</p>
-                <div class="mem__stats"><span>Moves <b id="mem-moves">0</b></span><span>Time <b id="mem-time">0s</b></span><span>Best <b id="mem-best">&ndash;</b></span></div>
-                <div class="mem__grid" id="mem-grid"></div>
-                <p class="game__msg" id="mem-msg" role="status"></p>
-              </div>
-              <div class="game">
-                <div class="game__head">
-                  <h3>Tic-Tac-Toe vs. AI</h3>
-                  <button class="link-btn" id="ttt-restart" type="button">New game</button>
-                </div>
-                <p class="game__sub">You are X. The AI uses the minimax algorithm, so it never loses. Can you force a draw?</p>
-                <div class="mem__stats"><span>You <b id="ttt-w">0</b></span><span>Draws <b id="ttt-d">0</b></span><span>AI <b id="ttt-l">0</b></span></div>
-                <div class="ttt" id="ttt"></div>
-                <p class="game__msg" id="ttt-msg" role="status">Your move.</p>
-              </div>
-            </div>
-            <ul class="pg__shows pg__shows--end"><li>Game state</li><li>Algorithms (minimax)</li><li>Animations</li><li>Accessibility</li></ul>
           </div>
         </div>
       </div>
