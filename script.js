@@ -91,3 +91,31 @@
   var y = document.getElementById('year');
   if (y) y.textContent = new Date().getFullYear();
 })();
+
+/*
+ * Live experience counters.
+ *   data-since="YYYY-MM"        -> "3 yrs 10 mos" (or "3 years 10 months" with data-format="long")
+ *   data-years-since="YYYY-MM"  -> whole years, e.g. "4"
+ * Used for the current job (Zasya Solutions). When a new job is added, change the
+ * old one to a fixed duration and put data-since on the new one.
+ */
+(function () {
+  function monthsSince(ym) {
+    var p = ym.split('-'), y = +p[0], m = +p[1];
+    var now = new Date();
+    return Math.max(0, (now.getFullYear() - y) * 12 + (now.getMonth() + 1 - m));
+  }
+  function plural(n, one, many) { return n + ' ' + (n === 1 ? one : many); }
+  document.querySelectorAll('[data-since]').forEach(function (el) {
+    var total = monthsSince(el.getAttribute('data-since'));
+    var y = Math.floor(total / 12), m = total % 12;
+    var long = el.getAttribute('data-format') === 'long';
+    var parts = [];
+    if (y) parts.push(plural(y, long ? 'year' : 'yr', long ? 'years' : 'yrs'));
+    if (m || !y) parts.push(plural(m, long ? 'month' : 'mo', long ? 'months' : 'mos'));
+    el.textContent = parts.join(' ');
+  });
+  document.querySelectorAll('[data-years-since]').forEach(function (el) {
+    el.textContent = Math.floor(monthsSince(el.getAttribute('data-years-since')) / 12);
+  });
+})();
