@@ -1,0 +1,413 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Rohit Gautam - Senior Full Stack Developer - Resume</title>
+<meta name="author" content="Rohit Gautam" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
+<style>
+  @page { size: A4; margin: 9mm 11mm 9mm; }
+  :root {
+    --text: #0f172a; --muted: #526077; --border: #dfe3ec; --soft: #f2f4f8;
+    --accent: #0d9488; --accent-2: #4f46e5; --accent-soft: rgba(13, 148, 136, .1);
+  }
+  * { box-sizing: border-box; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  html, body { margin: 0; }
+  body { font-family: "Inter", Arial, sans-serif; font-size: 8.4pt; line-height: 1.36; color: var(--text); }
+  a { color: inherit; text-decoration: none; }
+  ul { margin: 0; padding: 0; list-style: none; }
+  p { margin: 0; }
+  h1, h2, h3 { font-family: "Sora", "Inter", Arial, sans-serif; margin: 0; letter-spacing: -0.01em; }
+
+  .page { padding: 0; }
+
+  /* Header */
+  .head { position: relative; padding: 14px 16px 12px; border-radius: 14px; border: 1px solid var(--border); background: linear-gradient(135deg, rgba(13,148,136,.10), rgba(79,70,229,.08)); }
+  .head__top { display: flex; align-items: center; gap: 12px; }
+  .mark { display: grid; place-items: center; width: 40px; height: 40px; border-radius: 11px; background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: #fff; font: 700 15px "Sora", sans-serif; flex-shrink: 0; }
+  h1 { font-size: 22pt; line-height: 1.05; }
+  .role { font: 600 10.5pt "Sora", sans-serif; color: var(--accent); margin-top: 2px; }
+  .tagline { display: inline-block; margin-top: 7px; font: 600 10pt "Sora", sans-serif; background: linear-gradient(90deg, var(--accent), var(--accent-2)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .contact { display: flex; flex-wrap: wrap; gap: 3px 14px; margin-top: 7px; font-size: 8.4pt; color: var(--muted); }
+  .contact b { color: var(--text); font-weight: 600; }
+  .contact .pf { color: var(--accent); font-weight: 600; }
+  .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 7px; margin-top: 9px; }
+  .stat { background: #fff; border: 1px solid var(--border); border-radius: 9px; padding: 5px 9px; }
+  .stat b { display: block; font: 700 13pt "Sora", sans-serif; color: var(--accent); line-height: 1.15; }
+  .stat span { font-size: 7.6pt; color: var(--muted); }
+
+  /* Sections */
+  .sec { margin-top: 8px; }
+  .eyebrow { font: 500 7.2pt "JetBrains Mono", monospace; text-transform: uppercase; letter-spacing: .1em; color: var(--accent); }
+  h2 { font-size: 12pt; margin: 1px 0 6px; padding-bottom: 3px; border-bottom: 1.5px solid; border-image: linear-gradient(90deg, var(--accent), var(--accent-2)) 1; }
+  .about p { color: #334155; margin-bottom: 4px; }
+  .about strong { color: var(--text); }
+
+  /* Experience */
+  .job { display: grid; grid-template-columns: 24mm 1fr; gap: 8px; margin-bottom: 5px; break-inside: avoid; }
+  .job__meta { padding-top: 1px; }
+  .dur { display: inline-block; font: 600 7.8pt "JetBrains Mono", monospace; color: var(--accent); background: var(--accent-soft); border: 1px solid rgba(13,148,136,.3); border-radius: 999px; padding: 1px 7px; }
+  .place { display: block; font-size: 7.6pt; color: var(--muted); margin-top: 3px; }
+  .job h3 { font-size: 9.6pt; }
+  .at { color: var(--muted); font-weight: 600; }
+  .bul { margin-top: 3px; }
+  .bul li { position: relative; padding-left: 11px; color: #334155; margin-bottom: 1.5px; }
+  .bul li::before { content: ""; position: absolute; left: 1px; top: .58em; width: 4.5px; height: 4.5px; border-radius: 1.5px; background: var(--accent); }
+  .bul strong { color: var(--text); }
+  .tags { display: flex; flex-wrap: wrap; gap: 3px; margin-top: 3px; }
+  .tags li { font: 500 7pt "JetBrains Mono", monospace; color: var(--muted); background: var(--soft); border: 1px solid var(--border); border-radius: 999px; padding: 0 6px; }
+
+  /* Infrastructure stack */
+  .stack { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4px; }
+  .layer { border: 1px solid var(--border); border-left: 3px solid var(--accent); border-radius: 6px; padding: 3px 7px; break-inside: avoid; }
+  .layer:nth-child(n+4) { border-left-color: var(--accent-2); background: rgba(79,70,229,.05); }
+  .layer b { display: block; font: 600 8pt "Sora", sans-serif; }
+  .layer span { font-size: 7.3pt; color: var(--muted); }
+
+  /* Projects */
+  .proj { border: 1px solid var(--border); border-radius: 9px; padding: 6px 10px; margin-bottom: 5px; }
+  .cards .proj, .two .proj, .groups > div, .proj__head { break-inside: avoid; }
+  .proj__head { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
+  .proj h3 { font-size: 10pt; }
+  .proj h3 small { font: 500 8pt "Inter", sans-serif; color: var(--muted); }
+  .kicker { font: 500 6.8pt "JetBrains Mono", monospace; text-transform: uppercase; letter-spacing: .08em; color: var(--accent); }
+  .sub { color: var(--accent-2); font-weight: 600; font-size: 8.4pt; }
+  .status { font: 600 7pt "JetBrains Mono", monospace; padding: 1px 7px; border-radius: 999px; white-space: nowrap; }
+  .status--staging { background: rgba(245,158,11,.16); color: #b45309; }
+  .status--lead { background: var(--accent-soft); color: var(--accent); }
+  .lead { color: #334155; margin-top: 3px; }
+  .groups { display: grid; grid-template-columns: 1fr 1fr; gap: 0 14px; margin-top: 4px; }
+  .groups h4 { margin: 3px 0 1px; font: 600 7pt "JetBrains Mono", monospace; text-transform: uppercase; letter-spacing: .06em; }
+  .checks li { position: relative; padding-left: 11px; color: #334155; margin-bottom: 1px; }
+  .checks li::before { content: "\2713"; position: absolute; left: 0; color: var(--accent); font-weight: 700; }
+  .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-bottom: 6px; }
+  .cards .proj { margin: 0; }
+  .label { font: 500 6.8pt "JetBrains Mono", monospace; color: var(--muted); }
+  .two { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+  .list li { padding: 2px 0; border-top: 1px solid var(--border); }
+  .list li:first-child { border-top: 0; }
+  .list b { font-weight: 600; }
+  .list span { color: var(--muted); }
+  .nda { border: 1px dashed rgba(13,148,136,.5); background: var(--accent-soft); border-radius: 9px; padding: 6px 10px; margin-top: 6px; break-inside: avoid; }
+  .nda b { font-family: "Sora", sans-serif; }
+
+  /* Skills */
+  .skills { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; }
+  .skill { border: 1px solid var(--border); border-top: 2.5px solid var(--accent); border-radius: 8px; padding: 5px 8px; break-inside: avoid; }
+  .skill__head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 3px; }
+  .skill h3 { font-size: 8.8pt; }
+  .count { font: 600 7pt "JetBrains Mono", monospace; color: var(--accent-2); background: rgba(79,70,229,.1); border-radius: 999px; padding: 0 6px; }
+  .chips { display: flex; flex-wrap: wrap; gap: 3px; }
+  .chips li { font-size: 7.2pt; font-weight: 500; padding: 0 6px; border-radius: 5px; background: rgba(13,148,136,.07); border: 1px solid rgba(13,148,136,.22); }
+
+  .edu { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+  .edu div { border-top: 2px solid var(--accent); padding-top: 4px; }
+  .edu b { display: block; font: 600 8.8pt "Sora", sans-serif; }
+  .edu span { color: var(--muted); font-size: 8pt; }
+  .foot { margin-top: 10px; padding-top: 6px; border-top: 1px solid var(--border); display: flex; justify-content: space-between; font-size: 7.8pt; color: var(--muted); }
+  .foot b { color: var(--accent); }
+  .pb { break-before: page; padding-top: 4mm; }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header class="head">
+    <div class="head__top">
+      <div class="mark">RG</div>
+      <div>
+        <h1>Rohit Gautam</h1>
+        <p class="role">Senior Full Stack Developer &middot; Laravel &middot; PHP &middot; Vue.js &middot; React</p>
+      </div>
+    </div>
+    <p class="tagline">Full stack developer who also knows the servers it runs on.</p>
+    <div class="contact">
+      <span>Shimla, Himachal Pradesh, India</span>
+      <span><b>+91 98826 81110</b></span>
+      <a href="mailto:rohitgautamofficialmail@gmail.com"><b>rohitgautamofficialmail@gmail.com</b></a>
+      <a class="pf" href="https://rohit-gautam.vercel.app">Portfolio: rohit-gautam.vercel.app</a>
+      <a href="https://www.linkedin.com/in/rohit-gautam-b75b2122b">linkedin.com/in/rohit-gautam-b75b2122b</a>
+      <a href="https://github.com/RohitGautam11">github.com/RohitGautam11</a>
+    </div>
+    <div class="stats">
+      <div class="stat"><b>4+</b><span>Years building web apps</span></div>
+      <div class="stat"><b>7+</b><span>Years in IT overall</span></div>
+      <div class="stat"><b>15+</b><span>Projects delivered</span></div>
+      <div class="stat"><b>3</b><span>Countries served</span></div>
+    </div>
+  </header>
+
+  <section class="sec about">
+    <p class="eyebrow">01 &middot; About</p>
+    <h2>From the server room to the full stack</h2>
+    <p>
+      4+ years shipping Laravel, PHP, MySQL, Vue.js and React applications, on top of 3 years running Linux and Windows
+      servers, networks and firewalls. I started as a <strong>Server Administrator and IT Manager</strong>, and I still think
+      about what happens <em>after</em> deploy. I've delivered multi-channel e-commerce and inventory systems, SaaS products
+      and Himachal Pradesh government portals, plus work for clients in the USA and South Korea. Most projects start from a
+      blank repo: I gather requirements, design the database and APIs, build the frontend, wire up payment and communication
+      integrations, and ship to AWS. I'm usually the person who gets pulled in when something breaks in production.
+    </p>
+  </section>
+
+  <section class="sec">
+    <p class="eyebrow">02 &middot; Servers &amp; Networking</p>
+    <h2>I don't stop at the code</h2>
+    <div class="stack">
+      <div class="layer"><b>Frontend</b><span>Vue.js &middot; React &middot; TypeScript &middot; Tailwind</span></div>
+      <div class="layer"><b>Application &amp; APIs</b><span>Laravel &middot; PHP &middot; NestJS &middot; REST &middot; RBAC</span></div>
+      <div class="layer"><b>Data</b><span>MySQL schema design &middot; indexing &middot; query tuning</span></div>
+      <div class="layer"><b>Deploy &amp; Cloud</b><span>AWS &middot; Laravel Vapor &middot; CI/CD &middot; Git workflows</span></div>
+      <div class="layer"><b>Server &amp; OS</b><span>Linux &middot; Windows Server &middot; LAMP (Apache, MySQL, PHP)</span></div>
+      <div class="layer"><b>Network &amp; Security</b><span>Firewall rules &middot; network security policies &middot; audits</span></div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <p class="eyebrow">03 &middot; Experience</p>
+    <h2>Where I've worked</h2>
+
+    <div class="job">
+      <div class="job__meta"><span class="dur">~4 years</span><span class="place">Shimla, India</span></div>
+      <div>
+        <h3>Senior Software Developer <span class="at">@ Zasya Solutions Ltd.</span></h3>
+        <ul class="bul">
+          <li>Led development of <strong>Everlast</strong>, a multi-channel e-commerce and inventory platform keeping products, orders and stock in sync across Amazon, eBay, Drupal and custom stores.</li>
+          <li>Built enterprise, government and SaaS applications in Laravel, PHP, MySQL, Vue.js and Tailwind CSS, usually from a blank repo to production.</li>
+          <li>Designed REST APIs, MySQL schemas, login flows and role-based access control (RBAC) for new projects.</li>
+          <li>Integrated Stripe and other payment gateways, Amazon and eBay marketplace APIs, Twilio and Google Maps.</li>
+          <li>Set up the team's Git workflow and CI/CD pipelines; owned production deployments on AWS and Linux servers.</li>
+          <li>Tracked down production bugs across the app, database, API and server layers.</li>
+        </ul>
+        <ul class="tags"><li>Laravel</li><li>Vue.js</li><li>MySQL</li><li>Tailwind</li><li>AWS</li><li>CI/CD</li></ul>
+      </div>
+    </div>
+
+    <div class="job">
+      <div class="job__meta"><span class="dur">1.5 years</span><span class="place">Remote &middot; freelance</span></div>
+      <div>
+        <h3>Freelance Full Stack Developer <span class="at">@ MustFinTech</span></h3>
+        <ul class="bul">
+          <li>Delivered international e-commerce, SaaS and resource-management applications from requirements analysis through deployment.</li>
+          <li>Designed application architecture around each client's business requirements using Laravel, PHP, MySQL and Vue.js.</li>
+          <li>Reworked slow database queries and code paths so client apps ran faster and scaled more easily.</li>
+        </ul>
+        <ul class="tags"><li>Laravel</li><li>Vue.js</li><li>MySQL</li><li>Performance</li></ul>
+      </div>
+    </div>
+
+    <div class="job">
+      <div class="job__meta"><span class="dur">~1 year</span><span class="place">Shimla, India</span></div>
+      <div>
+        <h3>Junior Web Developer <span class="at">@ Netgen IT Solutions</span></h3>
+        <ul class="bul">
+          <li>Built dynamic, responsive web applications using Laravel, PHP, JavaScript, jQuery, AJAX and Bootstrap.</li>
+          <li>Developed reusable backend components, REST APIs, admin dashboards and database-driven features.</li>
+          <li>Fixed tricky bugs, refactored legacy code for speed and maintainability, and wrote technical documentation.</li>
+        </ul>
+        <ul class="tags"><li>Laravel</li><li>jQuery</li><li>AJAX</li><li>Bootstrap</li></ul>
+      </div>
+    </div>
+
+    <div class="job">
+      <div class="job__meta"><span class="dur">3 years</span><span class="place">Shimla, India</span></div>
+      <div>
+        <h3>Server Administrator &amp; IT Manager <span class="at">@ Surevin Pvt. Ltd.</span></h3>
+        <ul class="bul">
+          <li>Managed Linux and Windows Server environments, including LAMP stack configuration and optimization.</li>
+          <li>Implemented network security policies, firewall rules and server and application security audits.</li>
+          <li>Kept office IT infrastructure running and built analytical dashboards and reports in advanced Excel.</li>
+        </ul>
+        <ul class="tags"><li>Linux</li><li>Windows Server</li><li>LAMP</li><li>Security</li></ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <p class="eyebrow">04 &middot; Projects</p>
+    <h2>Selected work</h2>
+
+    <div class="proj">
+      <div class="proj__head">
+        <div><p class="kicker">Featured &middot; Multi-channel e-commerce &amp; inventory</p><h3>Everlast</h3></div>
+        <span class="status status--lead">Lead developer</span>
+      </div>
+      <p class="lead">A central dashboard that keeps products, orders and stock in sync across Amazon, eBay, Drupal stores and custom websites, so the team runs every sales channel from one place.</p>
+      <div class="groups">
+        <ul class="checks">
+          <li>Two-way sync of products, product data and orders across marketplaces and stores</li>
+          <li><b>Allocated inventory</b>: stock assigned to locations</li>
+          <li><b>Inbound inventory</b>: receiving and scanning incoming stock</li>
+        </ul>
+        <ul class="checks">
+          <li>Pre-order workflow turning out-of-stock demand into tracked pre-orders</li>
+          <li>Surplus inbound stock automatically released to available inventory</li>
+        </ul>
+      </div>
+      <ul class="tags"><li>Laravel</li><li>MySQL</li><li>REST APIs</li><li>Amazon API</li><li>eBay API</li><li>Drupal</li></ul>
+    </div>
+
+    <div class="proj">
+      <div class="proj__head">
+        <div><p class="kicker">SaaS product &middot; Social media management</p><h3>Post Guru</h3><p class="sub">Manage every social account from one dashboard</p></div>
+        <span class="status status--staging">On staging</span>
+      </div>
+      <p class="lead">Users connect their Facebook Pages, Instagram Business, X (Twitter), LinkedIn and YouTube accounts once, then create, schedule, publish, reply and measure everything from a single platform. Built as a multi-tenant SaaS with teams and paid plans.</p>
+      <div class="groups">
+        <div><h4>Publishing &amp; scheduling</h4><ul class="checks">
+          <li>Publish to many accounts at once with per-platform text, YouTube titles, images, carousels and video</li>
+          <li>Drag-and-drop content calendar with automatic publishing, retries with exponential backoff and failure alerts</li>
+          <li>Atomic job claiming so a scheduled post is never published twice</li>
+        </ul></div>
+        <div><h4>Engagement &amp; analytics</h4><ul class="checks">
+          <li>Unified DM inbox: Messenger, Instagram Direct and X DMs</li>
+          <li>Comment moderation (reply, hide, delete) triaged by sentiment; real-time Meta webhooks</li>
+          <li>Analytics: audience growth, engagement, top posts, best-time-to-post heatmap</li>
+        </ul></div>
+        <div><h4>SaaS &amp; teams</h4><ul class="checks">
+          <li>Workspaces with Owner, Admin, Editor and Viewer roles and email invitations</li>
+          <li>Stripe subscriptions (Free, Pro, Business) with server-side plan limits; presigned S3/R2 uploads</li>
+        </ul></div>
+        <div><h4>Security</h4><ul class="checks">
+          <li>JWT cookies with rotating refresh tokens; social tokens encrypted with AES-256-GCM</li>
+          <li>OAuth 2.0 with PKCE, signed webhooks, rate limiting and strict input validation</li>
+        </ul></div>
+      </div>
+      <ul class="tags"><li>NestJS</li><li>Next.js</li><li>TypeScript</li><li>Prisma</li><li>PostgreSQL</li><li>Tailwind CSS</li><li>Stripe</li><li>AWS S3 / R2</li><li>Meta Graph API</li><li>LinkedIn API</li><li>X API</li><li>YouTube API</li><li>Vercel</li><li>Docker</li></ul>
+    </div>
+
+    <div class="proj">
+      <div class="proj__head">
+        <div><p class="kicker">Team product &middot; Social &amp; communication</p><h3>वार्तालाप <small>(Vartalap)</small></h3><p class="sub">Chats, community feed, payments, call centre and helpdesk in one app</p></div>
+        <span class="status status--staging">On staging</span>
+      </div>
+      <p class="lead">A platform my team and I built where people connect with each other, chat privately or in groups, write public posts and blogs, and pay or split bills inside a conversation. End-to-end encrypted by default; runs on the web, as an installable app, and on Android and iPhone.</p>
+      <div class="groups">
+        <div><h4>Connect &amp; chat</h4><ul class="checks">
+          <li>1:1 and group chats (up to 256) with replies, reactions, edits, pins, read receipts, polls, files and voice notes</li>
+          <li><b>Vichaar</b>: public feed for posts and blogs with moods; time capsules and disappearing messages</li>
+        </ul></div>
+        <div><h4>Privacy &amp; security</h4><ul class="checks">
+          <li>In-browser E2EE: ECDH P-256 key exchange, AES-256-GCM messages and files, key rotation on member changes</li>
+          <li>Safety numbers, Privacy Shield, audit log and device list with remote sign-out</li>
+        </ul></div>
+        <div><h4>Wallet &amp; payments</h4><ul class="checks">
+          <li>Pay and split bills inside chats, payment requests, encrypted payment notes</li>
+          <li>Double-entry ledger with atomic, idempotent transfers</li>
+        </ul></div>
+        <div><h4>Business: call centre &amp; helpdesk</h4><ul class="checks">
+          <li>Shared business number, click-to-call with masking, power dialer, SMS/WhatsApp inbox and CRM</li>
+          <li>Tickets with SLA timers, smart triage (English, Hindi, Hinglish), CSAT; missed calls open callback tickets</li>
+        </ul></div>
+      </div>
+      <ul class="tags"><li>Next.js</li><li>React</li><li>TypeScript</li><li>PostgreSQL</li><li>WebCrypto (E2EE)</li><li>Zod</li><li>PWA</li><li>Capacitor (Android / iOS)</li><li>Vercel</li></ul>
+    </div>
+
+    <div class="proj">
+      <div class="proj__head">
+        <div><p class="kicker">SaaS product &middot; Personal branding</p><h3>Portfolio</h3><p class="sub">Personal and team portfolios, connected to LinkedIn</p></div>
+      </div>
+      <div class="groups">
+        <ul class="checks">
+          <li>Create a personal portfolio and share it with a single link</li>
+          <li>Create a team portfolio that showcases the whole team</li>
+        </ul>
+        <ul class="checks">
+          <li>Connect a LinkedIn account to the platform</li>
+          <li>Write and publish LinkedIn posts directly from the platform</li>
+        </ul>
+      </div>
+      <ul class="tags"><li>LinkedIn API</li><li>OAuth 2.0</li><li>Team workspaces</li></ul>
+    </div>
+
+    <div class="cards">
+      <div class="proj">
+        <p class="label">Recruitment &middot; Childcare</p>
+        <h3>EducatorConnect</h3>
+        <ul class="checks">
+          <li>Dashboards for parents, centres and educators</li>
+          <li>Job posting, applicant tracking and stages</li>
+          <li>Educator profiles with resume and video</li>
+          <li>Postal-code lookup, geocoding, radius &amp; distance search</li>
+        </ul>
+        <ul class="tags"><li>Laravel</li><li>Vue.js</li><li>MySQL</li><li>Google Maps API</li></ul>
+      </div>
+      <div class="proj">
+        <p class="label">USA client &middot; Telephony</p>
+        <h3>JotPhone</h3>
+        <ul class="checks">
+          <li>Browser-based call center platform</li>
+          <li>Browser calling with Twilio Voice</li>
+          <li>IVR menus and smart call routing</li>
+          <li>Delivered end to end for a USA client</li>
+        </ul>
+        <ul class="tags"><li>Laravel</li><li>Twilio Voice</li><li>IVR</li><li>Call Routing</li></ul>
+      </div>
+      <div class="proj">
+        <p class="label">South Korean client &middot; E-commerce</p>
+        <h3>Point To You (P2U)</h3>
+        <ul class="checks">
+          <li>International e-commerce for the Korean market</li>
+          <li>KakaoPay payment gateway integration</li>
+          <li>P2U Payment gateway integration</li>
+          <li>End-to-end storefront and checkout delivery</li>
+        </ul>
+        <ul class="tags"><li>Laravel</li><li>KakaoPay</li><li>P2U Payment</li></ul>
+      </div>
+    </div>
+
+    <div class="two">
+      <div class="proj">
+        <h3>Government portals &middot; Himachal Pradesh</h3>
+        <ul class="list">
+          <li><b>Advocate General, Himachal Pradesh</b> <span>&middot; Official High Court website</span></li>
+          <li><b>National Health Mission (NHM), HP</b> <span>&middot; State government health portal</span></li>
+          <li><b>HPSEDC</b> <span>&middot; E-commerce platform for HP Electronics Development Corporation</span></li>
+          <li><b>HPCPCR</b> <span>&middot; Child Rights Commission information portal</span></li>
+        </ul>
+      </div>
+      <div class="proj">
+        <h3>SaaS &amp; commercial platforms</h3>
+        <ul class="list">
+          <li><b>DialOnCloud</b> <span>&middot; Cloud-based browser calling solution</span></li>
+          <li><b>BlabBlab Messenger</b> <span>&middot; Real-time messaging and calling app</span></li>
+          <li><b>Business Hub</b> <span>&middot; Multi-service digital marketplace</span></li>
+          <li><b>Resource management apps</b> <span>&middot; International client work via MustFinTech</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="nda">
+      <b>Plus confidential work.</b> I've also built several in-house products at Zasya Solutions and other companies, and client
+      projects, whose names I can't share because of company confidentiality policies and NDAs. Happy to walk through the
+      architecture and the problems I solved in an interview.
+    </div>
+  </section>
+
+  <section class="sec">
+    <p class="eyebrow">05 &middot; Skills</p>
+    <h2>Tools I work with every day <span style="font:500 8pt Inter,sans-serif;color:var(--muted)">&middot; {{TOTAL}} technologies</span></h2>
+    <div class="skills">
+{{SKILLS}}
+    </div>
+  </section>
+
+  <section class="sec">
+    <p class="eyebrow">06 &middot; Education &amp; Languages</p>
+    <h2>Background</h2>
+    <div class="edu">
+      <div><b>B.Tech, Computer Science &amp; Engineering</b><span>A. P. Goyal Shimla University &middot; 2014 &ndash; 2018</span></div>
+      <div><b>Higher Secondary (12th), Non-Medical</b><span>Hainault Public School, Shimla &middot; 2013 &ndash; 2014</span></div>
+      <div><b>English &amp; Hindi</b><span>English (Professional) &middot; Hindi (Native)</span></div>
+    </div>
+  </section>
+
+  <div class="foot">
+    <span>Open to full-time roles &amp; freelance projects &middot; Shimla, India (IST, UTC+5:30)</span>
+    <span>Live demos, games and API: <b>rohit-gautam.vercel.app</b></span>
+  </div>
+</div>
+</body>
+</html>
