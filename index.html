@@ -61,6 +61,7 @@
         <a href="#infrastructure">Infrastructure</a>
         <a href="#experience">Experience</a>
         <a href="#projects">Projects</a>
+        <a href="#playground">Playground</a>
         <a href="#skills">Skills</a>
         <a href="#contact">Contact</a>
         <a href="assets/Rohit_Gautam_Resume.pdf" class="btn btn--sm btn--ghost nav__resume" target="_blank" rel="noopener">Resume</a>
@@ -168,8 +169,8 @@
               build software today: I think about what happens <em>after</em> deploy, not only before it.
             </p>
             <p>
-              Since 2022 I've worked as a full stack developer, and today I'm a <strong>Senior Software Developer at
-              Zasya Solutions</strong>, where I lead <strong>Everlast</strong>, a multi-channel e-commerce and inventory
+              I've spent 4+ years as a full stack developer, including about 4 years as a <strong>Senior Software Developer at
+              Zasya Solutions</strong>, where I led <strong>Everlast</strong>, a multi-channel e-commerce and inventory
               platform syncing Amazon, eBay, Drupal and custom stores. Most of my projects start from a blank repo:
               I gather requirements, design the database and APIs, build the frontend, wire up payment and
               communication integrations, and ship to AWS.
@@ -263,18 +264,18 @@
         <ol class="timeline">
           <li class="job reveal">
             <div class="job__meta">
-              <span class="job__date">Jan 2023 &ndash; Present</span>
+              <span class="job__dur">~4 years</span>
               <span class="job__place">Shimla, India</span>
             </div>
             <div class="job__body">
               <h3>Senior Software Developer <span class="at">@ Zasya Solutions Ltd.</span></h3>
               <ul>
-                <li>Lead development of <strong>Everlast</strong>, a multi-channel e-commerce and inventory platform keeping products, orders and stock in sync across Amazon, eBay, Drupal and custom stores.</li>
-                <li>Build enterprise, government and SaaS applications in Laravel, PHP, MySQL, Vue.js and Tailwind CSS, usually from a blank repo to production.</li>
-                <li>Design REST APIs, MySQL schemas, login flows and role-based access control (RBAC) for new projects.</li>
-                <li>Integrate Stripe and other payment gateways, Amazon and eBay marketplace APIs, Twilio and Google Maps.</li>
-                <li>Set up the team's Git workflow and CI/CD pipelines; own production deployments on AWS and Linux servers.</li>
-                <li>Track down production bugs across the app, database, API and server layers.</li>
+                <li>Led development of <strong>Everlast</strong>, a multi-channel e-commerce and inventory platform keeping products, orders and stock in sync across Amazon, eBay, Drupal and custom stores.</li>
+                <li>Built enterprise, government and SaaS applications in Laravel, PHP, MySQL, Vue.js and Tailwind CSS, usually from a blank repo to production.</li>
+                <li>Designed REST APIs, MySQL schemas, login flows and role-based access control (RBAC) for new projects.</li>
+                <li>Integrated Stripe and other payment gateways, Amazon and eBay marketplace APIs, Twilio and Google Maps.</li>
+                <li>Set up the team's Git workflow and CI/CD pipelines; owned production deployments on AWS and Linux servers.</li>
+                <li>Tracked down production bugs across the app, database, API and server layers.</li>
               </ul>
               <ul class="tags"><li>Laravel</li><li>Vue.js</li><li>MySQL</li><li>Tailwind</li><li>AWS</li><li>CI/CD</li></ul>
             </div>
@@ -282,8 +283,8 @@
 
           <li class="job reveal">
             <div class="job__meta">
-              <span class="job__date">Apr 2023 &ndash; Sep 2024</span>
-              <span class="job__place">Remote</span>
+              <span class="job__dur">1.5 years</span>
+              <span class="job__place">Remote &middot; freelance</span>
             </div>
             <div class="job__body">
               <h3>Freelance Full Stack Developer <span class="at">@ MustFinTech</span></h3>
@@ -298,7 +299,7 @@
 
           <li class="job reveal">
             <div class="job__meta">
-              <span class="job__date">Apr 2022 &ndash; Jan 2023</span>
+              <span class="job__dur">~1 year</span>
               <span class="job__place">Shimla, India</span>
             </div>
             <div class="job__body">
@@ -314,7 +315,7 @@
 
           <li class="job reveal">
             <div class="job__meta">
-              <span class="job__date">May 2019 &ndash; Mar 2022</span>
+              <span class="job__dur">3 years</span>
               <span class="job__place">Shimla, India</span>
             </div>
             <div class="job__body">
@@ -343,7 +344,7 @@
         <!-- Everlast feature -->
         <article class="feature reveal">
           <div class="feature__copy">
-            <p class="kicker">Featured &middot; Currently leading</p>
+            <p class="kicker">Featured &middot; Lead developer</p>
             <h3>Everlast</h3>
             <p class="feature__sub">Multi-channel e-commerce &amp; inventory management platform</p>
             <p>
@@ -451,22 +452,212 @@
       </div>
     </section>
 
-    <!-- SKILLS -->
-    <section class="section" id="skills">
+    <!-- PLAYGROUND -->
+    <section class="section" id="playground">
       <div class="container">
         <header class="section__head reveal">
-          <p class="eyebrow">05 &middot; Skills</p>
+          <p class="eyebrow">05 &middot; Playground</p>
+          <h2>Don't just read about it. Try it.</h2>
+          <p class="section__sub">
+            Small working apps I built for this site: a task board, a live backend API, a networking tool and two games.
+            Click around. Everything here runs for real.
+          </p>
+        </header>
+
+        <div class="pg reveal">
+          <div class="pg__tabs" role="tablist" aria-label="Live demos">
+            <button role="tab" id="tab-tasks" aria-controls="panel-tasks" aria-selected="true" class="pg__tab">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+              Task Board <span class="pg__kind">Frontend</span>
+            </button>
+            <button role="tab" id="tab-api" aria-controls="panel-api" aria-selected="false" tabindex="-1" class="pg__tab">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 9-4 3 4 3M16 9l4 3-4 3M14 5l-4 14"/></svg>
+              Inventory API <span class="pg__kind">Backend</span>
+            </button>
+            <button role="tab" id="tab-net" aria-controls="panel-net" aria-selected="false" tabindex="-1" class="pg__tab">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="2" width="6" height="6" rx="1"/><rect x="2" y="16" width="6" height="6" rx="1"/><rect x="16" y="16" width="6" height="6" rx="1"/><path d="M12 8v4M5 16v-2h14v2"/></svg>
+              Subnet Calculator <span class="pg__kind">Networking</span>
+            </button>
+            <button role="tab" id="tab-games" aria-controls="panel-games" aria-selected="false" tabindex="-1" class="pg__tab">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="6" width="20" height="12" rx="4"/><path d="M6 12h4M8 10v4M15 11h.01M18 13h.01"/></svg>
+              Games <span class="pg__kind">Logic</span>
+            </button>
+          </div>
+
+          <!-- Task board -->
+          <div class="pg__panel" role="tabpanel" id="panel-tasks" aria-labelledby="tab-tasks">
+            <div class="pg__intro">
+              <p>A Kanban-style task manager. Add tasks, drag them between columns (or use the arrows), filter by priority and search. Your board is saved in your browser.</p>
+              <ul class="pg__shows"><li>State management</li><li>Drag &amp; drop</li><li>Filtering &amp; search</li><li>Local persistence</li></ul>
+            </div>
+            <form class="tb__form" id="tb-form" autocomplete="off">
+              <label class="sr" for="tb-title">Task title</label>
+              <input id="tb-title" class="inp" type="text" maxlength="80" placeholder="e.g. Add Stripe webhook for failed payments" required />
+              <label class="sr" for="tb-priority">Priority</label>
+              <select id="tb-priority" class="inp inp--sel">
+                <option value="high">High</option>
+                <option value="medium" selected>Medium</option>
+                <option value="low">Low</option>
+              </select>
+              <button class="btn btn--primary" type="submit">Add task</button>
+            </form>
+            <div class="tb__tools">
+              <label class="sr" for="tb-search">Search tasks</label>
+              <input id="tb-search" class="inp inp--sm" type="search" placeholder="Search tasks..." />
+              <div class="seg" role="group" aria-label="Filter by priority">
+                <button type="button" data-filter="all" class="is-on">All</button>
+                <button type="button" data-filter="high">High</button>
+                <button type="button" data-filter="medium">Medium</button>
+                <button type="button" data-filter="low">Low</button>
+              </div>
+              <span class="tb__progress" id="tb-progress"></span>
+              <button type="button" class="link-btn" id="tb-clear">Clear done</button>
+              <button type="button" class="link-btn" id="tb-reset">Reset demo</button>
+            </div>
+            <div class="tb__board" id="tb-board">
+              <div class="tb__col" data-col="todo"><h4>To do <span class="cnt"></span></h4><ul class="tb__list"></ul></div>
+              <div class="tb__col" data-col="doing"><h4>In progress <span class="cnt"></span></h4><ul class="tb__list"></ul></div>
+              <div class="tb__col" data-col="done"><h4>Done <span class="cnt"></span></h4><ul class="tb__list"></ul></div>
+            </div>
+          </div>
+
+          <!-- Inventory API -->
+          <div class="pg__panel" role="tabpanel" id="panel-api" aria-labelledby="tab-api" hidden>
+            <div class="pg__intro">
+              <p>
+                A real REST API running as a Node.js serverless function on Vercel. It uses the same inbound-stock logic I built for
+                <strong>Everlast</strong>: incoming stock fills pending pre-orders first (oldest first), then the surplus is split
+                across warehouse locations and released as available stock. Edit the JSON and send it. Bad input gets a
+                Laravel-style <code>422</code> validation response.
+              </p>
+              <ul class="pg__shows"><li>REST design</li><li>Validation &amp; status codes</li><li>Business logic</li><li>Serverless deploy</li></ul>
+            </div>
+            <div class="api">
+              <div class="api__req">
+                <div class="api__line">
+                  <label class="sr" for="api-preset">Request</label>
+                  <select id="api-preset" class="inp inp--sel">
+                    <option value="receive">POST /api/inventory/receive</option>
+                    <option value="invalid">POST /api/inventory/receive (invalid body)</option>
+                    <option value="health">GET /api/health</option>
+                  </select>
+                  <button class="btn btn--primary" id="api-send" type="button">Send
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                  </button>
+                </div>
+                <label class="api__label" for="api-body">Request body (JSON)</label>
+                <textarea id="api-body" class="api__code" spellcheck="false" rows="16"></textarea>
+              </div>
+              <div class="api__res">
+                <div class="api__meta">
+                  <span class="api__label">Response</span>
+                  <span class="api__status" id="api-status">Waiting</span>
+                  <span class="api__time" id="api-time"></span>
+                </div>
+                <pre class="api__code api__out" id="api-out">// Press "Send" to call the live API</pre>
+                <p class="api__curl"><span>cURL</span><code id="api-curl"></code></p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Subnet calculator -->
+          <div class="pg__panel" role="tabpanel" id="panel-net" aria-labelledby="tab-net" hidden>
+            <div class="pg__intro">
+              <p>An IPv4 subnet calculator, the kind of thing I used every week as a server administrator. Enter an address in CIDR notation to see the network, broadcast, usable host range and masks.</p>
+              <ul class="pg__shows"><li>Networking</li><li>Bitwise logic</li><li>Input validation</li></ul>
+            </div>
+            <form class="net__form" id="net-form" autocomplete="off">
+              <label class="sr" for="net-in">IP address with CIDR prefix</label>
+              <input id="net-in" class="inp inp--mono" value="192.168.10.34/26" spellcheck="false" />
+              <button class="btn btn--primary" type="submit">Calculate</button>
+            </form>
+            <div class="net__presets">
+              <span>Try:</span>
+              <button type="button" class="chip-btn" data-net="10.0.0.0/8">10.0.0.0/8</button>
+              <button type="button" class="chip-btn" data-net="172.16.5.200/20">172.16.5.200/20</button>
+              <button type="button" class="chip-btn" data-net="192.168.1.77/24">192.168.1.77/24</button>
+              <button type="button" class="chip-btn" data-net="203.0.113.9/30">203.0.113.9/30</button>
+            </div>
+            <p class="net__err" id="net-err" role="alert"></p>
+            <dl class="net__grid" id="net-out"></dl>
+            <div class="net__bits" id="net-bits" aria-label="Binary view of address with network bits highlighted"></div>
+          </div>
+
+          <!-- Games -->
+          <div class="pg__panel" role="tabpanel" id="panel-games" aria-labelledby="tab-games" hidden>
+            <div class="games">
+              <div class="game">
+                <div class="game__head">
+                  <h3>Stack Memory</h3>
+                  <button class="link-btn" id="mem-restart" type="button">Restart</button>
+                </div>
+                <p class="game__sub">Match the pairs from my tech stack in as few moves as you can.</p>
+                <div class="mem__stats"><span>Moves <b id="mem-moves">0</b></span><span>Time <b id="mem-time">0s</b></span><span>Best <b id="mem-best">&ndash;</b></span></div>
+                <div class="mem__grid" id="mem-grid"></div>
+                <p class="game__msg" id="mem-msg" role="status"></p>
+              </div>
+              <div class="game">
+                <div class="game__head">
+                  <h3>Tic-Tac-Toe vs. AI</h3>
+                  <button class="link-btn" id="ttt-restart" type="button">New game</button>
+                </div>
+                <p class="game__sub">You are X. The AI uses the minimax algorithm, so it never loses. Can you force a draw?</p>
+                <div class="mem__stats"><span>You <b id="ttt-w">0</b></span><span>Draws <b id="ttt-d">0</b></span><span>AI <b id="ttt-l">0</b></span></div>
+                <div class="ttt" id="ttt"></div>
+                <p class="game__msg" id="ttt-msg" role="status">Your move.</p>
+              </div>
+            </div>
+            <ul class="pg__shows pg__shows--end"><li>Game state</li><li>Algorithms (minimax)</li><li>Animations</li><li>Accessibility</li></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section section--alt" id="skills">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow">06 &middot; Skills</p>
           <h2>Tools I work with every day</h2>
+          <p class="section__sub"><b id="skill-total">70+</b> technologies across the full stack, from the browser down to the server and the network. Every one of them is something I've used on real projects.</p>
         </header>
         <div class="skills">
-          <div class="skill reveal"><h3>Backend</h3><ul class="chips"><li class="hl">PHP</li><li class="hl">Laravel</li><li>Node.js</li><li>NestJS</li><li>REST APIs</li><li>MVC</li><li>OOP</li><li>Eloquent</li><li>Queues &amp; Jobs</li><li>Java (basic)</li></ul></div>
-          <div class="skill reveal"><h3>Frontend</h3><ul class="chips"><li class="hl">Vue.js</li><li class="hl">React</li><li>JavaScript</li><li>TypeScript</li><li>Tailwind CSS</li><li>Bootstrap</li><li>HTML5</li><li>CSS3</li><li>jQuery</li><li>AJAX</li></ul></div>
-          <div class="skill reveal"><h3>Databases</h3><ul class="chips"><li class="hl">MySQL</li><li>Schema design</li><li>Indexing</li><li>Query optimization</li><li>Migrations</li><li>Firebase Realtime DB</li></ul></div>
-          <div class="skill reveal"><h3>Cloud &amp; DevOps</h3><ul class="chips"><li class="hl">AWS</li><li>Laravel Vapor</li><li>CI/CD</li><li>Git</li><li>GitHub</li><li>GitLab</li><li>Bitbucket</li><li>Linux Server</li><li>Windows Server</li><li>LAMP</li></ul></div>
-          <div class="skill reveal"><h3>APIs &amp; Integrations</h3><ul class="chips"><li class="hl">Twilio Voice / IVR / SMS</li><li>Amazon API</li><li>eBay API</li><li>Google Maps &amp; Geocoding</li><li>Firebase Auth</li></ul></div>
-          <div class="skill reveal"><h3>Payments</h3><ul class="chips"><li class="hl">Stripe</li><li>Laravel Cashier</li><li>Razorpay</li><li>KakaoPay</li><li>P2U Payment</li></ul></div>
-          <div class="skill reveal"><h3>CMS &amp; E-commerce</h3><ul class="chips"><li>WordPress</li><li>Shopify</li><li>Drupal</li><li>October CMS</li><li>Winter CMS</li></ul></div>
-          <div class="skill reveal"><h3>Security &amp; Practices</h3><ul class="chips"><li class="hl">RBAC</li><li>Auth &amp; Authorization</li><li>Firewalls</li><li>Security audits</li><li>Code review</li><li>SDLC</li><li>Documentation</li></ul></div>
+          <div class="skill reveal">
+            <div class="skill__head"><span class="skill__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v6c0 1.66 3.58 3 8 3s8-1.34 8-3V5M4 11v6c0 1.66 3.58 3 8 3s8-1.34 8-3v-6"/></svg></span><h3>Backend</h3><span class="skill__count"></span></div>
+            <ul class="chips"><li>PHP</li><li>Laravel</li><li>Node.js</li><li>NestJS</li><li>REST APIs</li><li>RESTful web services</li><li>MVC</li><li>OOP</li><li>Eloquent ORM</li><li>Queues &amp; Jobs</li><li>Events &amp; Middleware</li><li>Java (basic)</li></ul>
+          </div>
+          <div class="skill reveal">
+            <div class="skill__head"><span class="skill__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 21h8M12 18v3M7 9l2 2-2 2M12 13h4"/></svg></span><h3>Frontend</h3><span class="skill__count"></span></div>
+            <ul class="chips"><li>Vue.js</li><li>React</li><li>JavaScript</li><li>TypeScript</li><li>HTML5</li><li>CSS3</li><li>Tailwind CSS</li><li>Bootstrap</li><li>jQuery</li><li>AJAX</li><li>Responsive design</li></ul>
+          </div>
+          <div class="skill reveal">
+            <div class="skill__head"><span class="skill__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3v18h18"/><path d="m7 15 4-4 3 3 5-6"/></svg></span><h3>Databases</h3><span class="skill__count"></span></div>
+            <ul class="chips"><li>MySQL</li><li>SQL</li><li>Database design</li><li>Indexing</li><li>Query optimization</li><li>Migrations</li><li>Firebase Realtime DB</li></ul>
+          </div>
+          <div class="skill reveal">
+            <div class="skill__head"><span class="skill__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 19a4.5 4.5 0 1 0-1.4-8.78A6 6 0 0 0 4.5 12 3.5 3.5 0 0 0 6 19z"/></svg></span><h3>Cloud &amp; DevOps</h3><span class="skill__count"></span></div>
+            <ul class="chips"><li>AWS</li><li>Laravel Vapor</li><li>CI/CD pipelines</li><li>Git</li><li>GitHub</li><li>GitLab</li><li>Bitbucket</li><li>Production deployments</li></ul>
+          </div>
+          <div class="skill reveal">
+            <div class="skill__head"><span class="skill__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="7" rx="1.5"/><rect x="3" y="14" width="18" height="7" rx="1.5"/><path d="M7 6.5h.01M7 17.5h.01"/></svg></span><h3>Servers &amp; Networking</h3><span class="skill__count"></span></div>
+            <ul class="chips"><li>Linux Server</li><li>Windows Server</li><li>LAMP stack</li><li>Apache</li><li>Firewall configuration</li><li>Network security policies</li><li>Security audits</li><li>IT infrastructure</li></ul>
+          </div>
+          <div class="skill reveal">
+            <div class="skill__head"><span class="skill__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.5 1.5"/><path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.5-1.5"/></svg></span><h3>APIs &amp; Integrations</h3><span class="skill__count"></span></div>
+            <ul class="chips"><li>Twilio Voice</li><li>IVR</li><li>SMS</li><li>Call routing</li><li>Amazon API</li><li>eBay API</li><li>Google Maps API</li><li>Geocoding</li><li>Firebase Authentication</li></ul>
+          </div>
+          <div class="skill reveal">
+            <div class="skill__head"><span class="skill__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20M6 15h4"/></svg></span><h3>Payments</h3><span class="skill__count"></span></div>
+            <ul class="chips"><li>Stripe</li><li>Laravel Cashier</li><li>Razorpay</li><li>KakaoPay</li><li>P2U Payment</li></ul>
+          </div>
+          <div class="skill reveal">
+            <div class="skill__head"><span class="skill__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M2 3h3l2.7 12.4a2 2 0 0 0 2 1.6h8.6a2 2 0 0 0 2-1.6L22 7H6"/></svg></span><h3>CMS &amp; E-commerce</h3><span class="skill__count"></span></div>
+            <ul class="chips"><li>WordPress</li><li>Shopify</li><li>Drupal</li><li>October CMS</li><li>Winter CMS</li></ul>
+          </div>
+          <div class="skill reveal">
+            <div class="skill__head"><span class="skill__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 4 5v6c0 5 3.4 9.4 8 11 4.6-1.6 8-6 8-11V5z"/><path d="m9 12 2 2 4-4"/></svg></span><h3>Security &amp; Practices</h3><span class="skill__count"></span></div>
+            <ul class="chips"><li>RBAC</li><li>Authentication &amp; authorization</li><li>Code review</li><li>SDLC</li><li>Technical documentation</li><li>Performance optimization</li></ul>
+          </div>
         </div>
 
         <div class="edu reveal">
@@ -490,11 +681,11 @@
     </section>
 
     <!-- CONTACT -->
-    <section class="section section--alt" id="contact">
+    <section class="section" id="contact">
       <div class="container">
         <div class="contact reveal">
           <div class="contact__copy">
-            <p class="eyebrow">06 &middot; Contact</p>
+            <p class="eyebrow">07 &middot; Contact</p>
             <h2>Have a project or a role in mind?</h2>
             <p>
               I'm open to senior full stack and Laravel roles (remote or on-site) and to freelance projects for
@@ -541,5 +732,6 @@
 
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
   <script src="script.js" defer></script>
+  <script src="playground.js" defer></script>
 </body>
 </html>
