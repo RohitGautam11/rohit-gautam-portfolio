@@ -1,5 +1,7 @@
 # Rohit Gautam | Portfolio
 
+**Live:** https://rohit-gautam.vercel.app
+
 Personal portfolio of **Rohit Gautam**, Senior Full Stack Developer (Laravel, PHP, Vue.js, React) with a background in Linux/Windows server administration and network security.
 
 - Experience, projects (Everlast, EducatorConnect, JotPhone, Point To You, Himachal Pradesh government portals) and skills
